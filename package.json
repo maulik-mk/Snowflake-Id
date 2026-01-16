@@ -1,0 +1,65 @@
+{
+  "name": "@toolkit-f/snowflake-id",
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Unique ID Generator For NodeJS",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.ts",
+        "require": "./dist/index.d.cts"
+      },
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:bm": "vitest run tests/benchmark.test.ts",
+    "test:co": "vitest run tests/collision.test.ts",
+    "test:ut": "vitest run tests/utils.test.ts",
+    "test:watch": "vitest --watch",
+    "test:dist:js": "node tests/dist.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maulik-mk/Snowflake-Id.git"
+  },
+  "keywords": [
+    "snowflake",
+    "id",
+    "uuid",
+    "unique-id",
+    "distributed",
+    "typescript",
+    "generator"
+  ],
+  "author": "Maulik M. K.",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/maulik-mk/Snowflake-Id/issues"
+  },
+  "homepage": "https://github.com/maulik-mk/Snowflake-Id#readme",
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.17"
+  }
+}
